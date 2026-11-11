@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jano — Web Portfolio
 
-## Getting Started
+Single-page portfolio built with Next.js 16, React 19, and Tailwind CSS 4.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customize content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | File |
+|------|------|
+| Bio, email, socials, skills | [`src/data/site.ts`](src/data/site.ts) |
+| Projects | [`src/data/projects.ts`](src/data/projects.ts) |
+| Personal photos | [`src/data/photos.ts`](src/data/photos.ts) |
+| Dog photos | [`src/data/dogs.ts`](src/data/dogs.ts) |
+| Images | `public/images/` |
 
-## Learn More
+Replace `TODO:` values — links stay hidden until you do.
 
-To learn more about Next.js, take a look at the following resources:
+**Images:** Demo photos use [Unsplash](https://unsplash.com) URLs in `src/data/*.ts`. Swap them for files in `public/images/` when you have your own (works offline, no config needed).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add your resume at `public/resume.pdf` for the Resume button.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Environment
 
-## Deploy on Vercel
+Copy `.env.example` to `.env.local` and set your public URL when you host the site:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This powers Open Graph previews, `sitemap.xml`, and `robots.txt`.
+
+## Scripts
+
+```bash
+npm run dev    # local development
+npm run build  # production build
+npm run start  # serve production build locally
+npm run lint   # ESLint
+```
+
+## Deploy later (optional)
+
+When ready, build and deploy to any static-friendly Next host (Vercel, Netlify, etc.):
+
+1. Set `NEXT_PUBLIC_SITE_URL` to your live domain.
+2. Run `npm run build` — fix any errors before deploying.
+3. Connect the repo to your host of choice.
+
+No deployment is required for local development or interview demos — `npm run dev` is enough.

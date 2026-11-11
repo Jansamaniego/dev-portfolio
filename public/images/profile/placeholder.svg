@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Profile placeholder">
+  <rect width="512" height="512" fill="#18181b"/>
+  <circle cx="256" cy="200" r="72" fill="#3f3f46"/>
+  <ellipse cx="256" cy="400" rx="120" ry="88" fill="#3f3f46"/>
+  <text x="256" y="480" text-anchor="middle" fill="#71717a" font-family="system-ui,sans-serif" font-size="14">Add your photo</text>
+</svg>
